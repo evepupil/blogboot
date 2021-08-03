@@ -1,0 +1,139 @@
+body{
+    background-image: url(../images/login_bg1.jpg);
+    background-size: cover;
+}
+.container{
+    margin-left: 450px;
+    width: 650px;
+    height: 550px;
+    position: absolute;
+}
+.welcome{
+    background-color: #212529;
+    width: 650px;
+    height: 415px;
+    position: absolute;
+    top: 25%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+}
+.pinkbox{
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background-color: #fff;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, .1);
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+.nodisplay{
+    display: none;
+    transition: all 0.5s ease;
+}
+.leftbox,.rightbox{
+    position: absolute;
+    width: 50%;
+    transition: all 1s ease;
+}
+.leftbox{
+    left: -2%;
+}
+.rightbox{
+    right: -2%;
+}
+h1{
+    text-align: center;
+    margin-top: 95px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2rem;
+    letter-spacing: 8px;
+}
+.title{
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20%;
+    
+}
+.desc{
+    margin-top: -8px;
+}
+.account{
+    margin-top: 60%;
+    font-size: 10px;
+}
+p{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #f3f3f3;
+    text-align: center;
+}
+.flower{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 30%;
+    left: 27%;
+}
+.smaller{
+    width: 130px;
+    height: 130px;
+    top: 48%;
+    left: 30%;
+    opacity: 0.9;
+}
+button{
+    padding: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    border-radius: 5px;
+    margin: 30px auto;
+    outline: none;
+    display: block;
+    border: none;
+    background-color: #fff;
+    color: #212529;
+}
+button:hover{
+    background-color: #212529;
+    color: #fff;
+    transition: all 0.3s;
+}
+.button2{
+    background-color: #212529;
+    color: #fff;
+}
+.button2:hover{
+    background-color: #fff;
+    color: #212529;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 7px;
+}
+input{
+    margin-left: 28px;
+    margin-top: 10px;
+}
+.input{
+    letter-spacing: 5px;
+    height: 40px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+}
+.input:focus{
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/70854301_p0.jpg);
+    background-size: cover;
+    position: fixed;
+    z-index: -999;
+}
+
+.title {
+    text-align: right;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffffE6;
+    position: fixed;
+    z-index: 1;
+}
+
+.name {
+    font-size: 18px;
+    margin-left: 200px;
+    line-height: 80px;
+    color: #409ede;
+    float: left;
+}
+
+.search {
+    width: 200px;
+    height: 35px;
+    outline: none;
+    margin-right: 400px;
+    margin-top: 23px;
+    background-color: #e4eff6;
+    border: none;
+    color: #668599 !important;
+    transition: all .5s;
+    padding-left: 15px;
+}
+
+input::-webkit-input-placeholder {
+    color: #668599 !important;
+}
+
+.search:focus {
+    width: 400px;
+    background-color: #fff;
+    border: 2px solid #409ede;
+}
+
+.user {
+    width: 200px;
+    height: 60px;
+    margin-left: 1150px;
+    margin-top: -50px;
+}
+
+.user .img {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.user .img img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+.user .username {
+    text-align: left;
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.user .p-intro {
+    display: inline-block;
+    margin-top: 10px;
+    float: left;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+.main {
+    width: 80%;
+    height: 1800px;
+    background-color: #ffffffE6;
+    border-radius: 10px;
+    position: absolute;
+    top: 140px;
+    left: 150px;
+}
+
+.left-box {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.new {
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #4b9cd3;
+    color: white;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.new:hover {
+    background-color: #3791ce;
+}
+
+.condition {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.condition p {
+    margin-bottom: 15px;
+    color: #668599;
+    cursor: pointer;
+}
+
+.condition p:hover {
+    color: #3791ce;
+    font-weight: bold;
+}
+
+.type {
+    margin-top: 50px;
+}
+
+.type li {
+    color: #668599;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    font-size: 14px;
+}
+
+.color1,
+.color2,
+.color3,
+.color4,
+.color5,
+.color6,
+.color7,
+.color8,
+.color9 {
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+.color1 {
+    background-color: rgb(231, 101, 46);
+}
+
+.color2 {
+    background-color: rgb(45, 140, 97);
+}
+
+.color3 {
+    background-color: rgb(235, 159, 54);
+}
+
+.color4 {
+    background-color: rgb(68, 191, 87);
+}
+
+.color5 {
+    background-color: rgb(68, 191, 87);
+}
+
+.color6 {
+    background-color: rgb(51, 102, 255);
+}
+
+.color7 {
+    background-color: rgb(149, 101, 209);
+}
+
+.color8 {
+    background-color: rgb(119, 119, 119);
+}
+
+.color9 {
+    background-color: rgb(102, 204, 255);
+}
+
+.type li:hover p {
+    color: #3791ce;
+}
+
+.right-box {
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+}
+
+.tiezi {
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.userimg {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 15px;
+    margin-top: 10px;
+    float: left;
+    margin-right: 10px;
+}
+
+.userimg img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.tz-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.username2 {
+    font-size: 12px;
+    color: #888!important;
+}
+
+.time {
+    font-size: 12px;
+    color: #888!important;
+}
+
+.neirong {
+    font-size: 12px;
+    color: #888!important;
+    margin-top: 10px;
+    margin-left: 73px;
+}
+
+.tz-main {
+    width: 80%;
+    float: left;
+}
+
+.tz-type {
+    width: 35px;
+    height: 17px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(51, 102, 255);
+    text-align: center;
+    line-height: 17px;
+    border-radius: 3px;
+    margin-left: 800px;
+    margin-top: 20px;
+}
+
+.tiezi:hover {
+    background-color: rgba(75, 114, 139, 0.1);
+}

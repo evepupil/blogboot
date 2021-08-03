@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link type="text/css" rel=stylesheet th:href="@{/css/Login.css}">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+
+<body>
+<div class="loginBox">
+    <h2>注册</h2>
+    <form >
+        <div class="item">
+            <input type="text" name="username" id="username"  required>
+            <label for="username">用户名</label>
+        </div>
+        <div class="item">
+            <input type="password" name="password" id="password"  required>
+            <label for="password">密码</label>
+        </div>
+        <img src="/verifycode" οnclick="changeValiImage(this)" /><!-- 验证码图片 -->
+        <input type="text" id="verifycode" placeholder="输入验证码" maxlength=" 4" name="ValiImage" /><!-- 输入验证码文本 -->
+        <p style="text-align: center; display:none;
+                color: red;font-size:10px ;position: absolute" id="info" ></p>
+            <button class="btn" id="btn">注册
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+    </form>
+    <script type="text/javascript">
+        console.log($("#username").val());
+        function changeValiImage(img){
+            img.src = "/verifycode";
+        }
+
+        $("#btn").click(function () {
+            $.ajax({
+                url : "/api/registerCheck",
+                type : 'post',
+                headers: { 'content-type': 'application/x-www-form-urlencoded' },
+                data:{username:$("#username").val(),
+                    password:$("#password").val(),
+                    verifycode:$("#verifycode").val(),
+                },
+                success : function(data) {
+                    console.log($("#username").val());
+                    console.log($("#password").val());
+                    console.log(data.statecode);
+                    //var dataObj=eval("("+data+")");
+                    //console.log(dataObj);
+                    if(data.statecode == "0") {
+                        $("#info").text("提示:验证码错误");
+                        $("#info").slideDown("slow");
+                    } else if(data.statecode == "2") {
+                        $("#info").text("提示:用户名已存在");
+                        $("#info").slideDown("slow");
+                    } else if(data.statecode == "1"){
+                        $("#info").text("提示:注册成功，跳转中...");
+                        $("#info").slideDown("slow");
+                        window.location.href="/index";
+                    }
+                },
+                error : function(error) {
+                    console.log('接口不通' + error);
+                }
+            });
+
+        })
+    </script>
+
+</div>
+
+</body>
+
+</html>

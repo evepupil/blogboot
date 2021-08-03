@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel=stylesheet th:href="@{/css/index.css}">
+    <script src="https://cdn.staticfile.org/vue/3.0.5/vue.global.js"></script>
+    <title>叶桐论坛</title>
+</head>
+<body>
+    <div class="background">
+    </div>
+    <nav>
+        <div class="title">
+            <p class="name">论坛广场</p>
+            <input type="text" class="search" placeholder="搜索">
+            <div class="user">
+                <div class="img">
+                    <img src="/headimage" alt="">
+                </div>
+                <p class="username">八叶茶摘</p>
+                <span class="p-intro">さあ、始めようか</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="left-box">
+            <button class="new">发布主题</button>
+            <div class="condition">
+                <p>●全部主题</p>
+                <p>●关注</p>
+                <p>●标签</p>
+            </div>
+            <div class="type">
+                <ul>
+                    <li>
+                        <div class="color1"></div>
+                        <p class="types">求助</p>
+                    </li>
+                    <li>
+                        <div class="color2"></div>
+                        <p class="types">水贴</p>
+                    </li>
+                    <li>
+                        <div class="color3"></div>
+                        <p class="types">经验</p>
+                    </li>
+                    <li>
+                        <div class="color4"></div>
+                        <p class="types">资源</p>
+                    </li>
+                    <li>
+                        <div class="color5"></div>
+                        <p class="types">技术</p>
+                    </li>
+                    <li>
+                        <div class="color6"></div>
+                        <p class="types">其他</p>
+                    </li>
+                    <li>
+                        <div class="color7"></div>
+                        <p class="types">反馈</p>
+                    </li>
+                    <li>
+                        <div class="color8"></div>
+                        <p class="types">部活</p>
+                    </li>
+                    <li>
+                        <div class="color9"></div>
+                        <p class="types">新闻</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="tiezi" th:each="article :${articles}">
+                <div class="tz-main" onclick="">
+                    <div class="userimg">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="tz-name" th:text="${article.title}">123</p>
+                    <span class="username2" th:text="${article.id}">八叶茶摘</span>
+                    <span class="time" th:text="'发布于'+ ${article.time}">发布于 2021/7/20</span>
+                    <p class="neirong" th:text="${article.desci}">这是一个测试0.0</p>
+                </div>
+                <div class="tz-type">
+                    水贴
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+body {
+    background-image: url(../images/background-reg.jpg);
+    background-size: cover;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.black {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000020;
+    overflow: hidden;
+}
+
+.regbox {
+    width: 25%;
+    height: 70%;
+    background-color: #ffffffe6;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 28px;
+    margin-top: 35px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.introduce {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.login {
+    width: 100%;
+    height: 80px;
+    margin-top: 50px;
+}
+
+.login .password,
+.username {
+    width: 80%;
+    height: 50%;
+    padding-left: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    /*background-color:none;*/
+}
+input::-webkit-input-placeholder{
+    color: #668599 !important;
+}
+
+.b-login{
+    width: 80%;
+    height: 35px;
+    margin-top: 35px;
+    border-radius: 18px;
+    outline: none;
+    border: none;
+    background-color: #333333;
+    color: white;
+    transition: all .2s;
+}
+.b-login:hover{
+    background-color: black;
+}
+
+.forget{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 300px;
+}
+.illustration{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-top: 1px solid silver;
+    color: silver;
+}
+.illustration span{
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+.background{
+    width: 170px;
+    height: 70px;
+    background-color: #00000099;
+    float: right;
+    margin-right: 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.background img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.background .tx{
+    width: 3rem;
+    height: 3rem;
+    background-color: #fff;
+    
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+    margin-right: 15px;
+}
+.background p{
+    font-size: 12px;
+    margin: 5px;
+    
+    color: white;
+}
+.background .name{
+    margin-top: 15px;
+}

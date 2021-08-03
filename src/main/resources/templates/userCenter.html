@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../static/css/userCenter.css">
+</head>
+<body>
+    <div class="background">
+
+    </div>
+    <nav>
+        <div class="title">
+            <p class="name">论坛广场</p>
+            <input type="text" class="search" placeholder="搜索">
+            <div class="user">
+                <div class="img">
+                    <img src="./img/90973678_p0.jpg" alt="">
+                </div>
+                <p class="username">八叶茶摘</p>
+                <span class="p-intro">さあ、始めようか</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        
+        <div class="top-box">
+            <div class="headimg">
+                <img src="./img/90973678_p0.jpg" alt="">
+            </div>
+            <div class="content">
+                <p class="username">八叶茶摘</p>
+                <p class="reg-time">注册于：2021/8/1</p>
+                <div class="personal-signature">
+                    <input type="text" value="さあ、始めようか">
+                </div>
+            </div>
+            
+        </div>
+        <div class="bottom-box clearfix">
+            <div class="left-nav">
+                <ul>
+                    <li v-for="(list, index) in leftNav" :key="index"  :class='{"nav-li":true,"bold":num == index}' @click='num = index,changeShow(index)'>{{list}}</li>
+                </ul>
+            </div>
+
+            <div class="reply" v-if='show1'>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">回复内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">回复内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">回复内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">回复内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">回复内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post" v-if='show2'>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">帖子名称</p>
+                    <p class="reply-content">帖子内容</p>
+                    <div class="right-box">
+                        <div class="post-type">
+                            水贴
+                        </div>
+                        <ul>
+                            <li>
+                                <span>1</span>
+                                浏览
+                            </li>
+                            <li>
+                                <span>1</span>
+                                回复
+                            </li>
+                            <li>
+                                <span>1</span>
+                                点赞
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="at-me" v-if='show3'>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90297109_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">XXX@了你</p>
+                    <p class="reply-content">帖子名称</p>
+                    <p class="reply-content">@内容</p>
+                </div>
+            </div>
+            <div class="Ignored-Users" v-if='show4'>
+                <div class="line">
+                    <div class="user-img">
+                        <img src="./img/90973678_p0.jpg" alt="">
+                    </div>
+                    <p class="post-name">ID</p>
+                    <p class="reply-content">个性签名</p>
+                </div>
+            </div>
+            <div class="setup" v-if='show5'>
+               <div class="account">
+                   <p>账户</p>
+                   <a href="" class="box">更改密码</a>
+                   <a href="" class="box">修改邮箱</a>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/js/vue.js"></script>
+<script src="../static/js/userCenter.js"></script>
+</html> 
